@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const { t } = useTranslation(); // Initialize the useTranslation hook
+  const { t } = useTranslation();
   return (
     <div>
       <Box className="mx-10 my-20 ">

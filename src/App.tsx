@@ -7,8 +7,6 @@ import "tailwindcss/tailwind.css";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      {" "}
-      {/* Provide i18n instance */}
       <div className="App">
         <SideBar />
       </div>

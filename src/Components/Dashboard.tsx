@@ -11,7 +11,6 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
-
 import { useSelector } from "react-redux";
 import { RootState } from "../Store/store";
 
@@ -20,7 +19,6 @@ const Dashboard: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const userData = useSelector((state: RootState) => state.user);
 
-  // Access the dummy data from userData.data
   const dummyData: UserData[] = userData.data;
   interface UserData {
     id: number;
@@ -49,8 +47,8 @@ const Dashboard: React.FC = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>{t("name")}</TableCell> {/* Use the translation */}
-                <TableCell>{t("email")}</TableCell> {/* Use the translation */}
+                <TableCell>{t("name")}</TableCell>
+                <TableCell>{t("email")}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

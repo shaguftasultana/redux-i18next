@@ -1,18 +1,15 @@
-// src/store/userSlice.ts
-
 import { createSlice } from '@reduxjs/toolkit';
 
 interface UserState {
   name: string;
   email: string;
-  data: any[]; // Define the data property
-  // Add other user properties as needed
+  data: any[]; 
 }
 
 const initialState: UserState = {
   name: '',
   email: '',
-  data: [], // Initialize the data property
+  data: [], 
 };
 
 const userSlice = createSlice({

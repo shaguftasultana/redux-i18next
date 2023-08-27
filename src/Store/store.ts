@@ -1,5 +1,3 @@
-// src/store/store.ts
-
 import { configureStore } from '@reduxjs/toolkit';
 import userReducer from './userSlice';
 
@@ -15,7 +13,7 @@ const initialState = {
   user: {
     name: '',
     email: '',
-    data: dummyData, // Add the dummy data to the initial state
+    data: dummyData, 
   },
 };
 
@@ -23,7 +21,7 @@ const store = configureStore({
   reducer: {
     user: userReducer,
   },
-  preloadedState: initialState, // Set the initial state
+  preloadedState: initialState, 
 });
 
 export type RootState = ReturnType<typeof store.getState>;

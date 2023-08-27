@@ -10,24 +10,19 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
 import { AiFillHome } from "react-icons/ai";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 import { MdOutlineContactSupport } from "react-icons/md";
-
 import { FiSettings } from "react-icons/fi";
-
 import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Settings from "./Settings";
 import Contact from "./Contact";
-
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -56,7 +51,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -101,7 +95,7 @@ const Drawer = styled(MuiDrawer, {
 
 export default function SideBar() {
   const { i18n } = useTranslation();
-  const { t } = useTranslation(); // Initialize the useTranslation hook
+  const { t } = useTranslation();
 
   const changeLanguage = (lng: string | undefined) => {
     console.log("Changing language to:", lng);
@@ -133,11 +127,15 @@ export default function SideBar() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap component="div">
-              Shagufta Sultana
-            </Typography>{" "}
-            <div className="flex justify-end">
-              <button onClick={() => changeLanguage("en")}>English</button>
-              <button onClick={() => changeLanguage("ar")}>عربي</button>
+              {t("shagufta")}
+            </Typography>
+            <div className="ml-auto items-center">
+              <button onClick={() => changeLanguage("en")} className="mr-2">
+                English
+              </button>
+              <button onClick={() => changeLanguage("ar")} className="mr-2">
+                عربي
+              </button>
             </div>
           </Toolbar>
         </AppBar>

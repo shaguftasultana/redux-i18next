@@ -1,9 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-
-// Import your translation files
-import enTranslation from "../src/translations/en/en.json"; // English translations
-import arTranslation from "../src/translations/ar/ar.json"; // Arabic translations
+import enTranslation from "../src/translations/en/en.json";
+import arTranslation from "../src/translations/ar/ar.json";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -13,12 +11,11 @@ i18n.use(initReactI18next).init({
     ar: {
       translation: arTranslation,
     },
-    // Add other languages as needed
   },
-  lng: "en", // Default language
-  fallbackLng: "en", // Fallback language
+  lng: "en",
+  fallbackLng: "en",
   interpolation: {
-    escapeValue: false, // React already escapes values
+    escapeValue: false,
   },
 });
 
