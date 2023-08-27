@@ -1,9 +1,7 @@
-
 {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "settings": "Settings",
-    "contact": "Contact"
-   
-  }
-  
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "settings": "Settings",
+  "contact": "Contact",
+  "HomeAbout": "Remember that a well-designed and informative website can significantly impact how users perceive your software. Make sure to focus on creating a user-friendly experience, providing valuable content, and addressing potential user questions or concerns. If you need help with specific aspects or design considerations, feel free to ask!"
+}
